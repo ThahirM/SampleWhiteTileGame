@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		C02375D9195BEB07000A9426 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02375D8195BEB07000A9426 /* AppDelegate.swift */; };
-		C02375DB195BEB07000A9426 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02375DA195BEB07000A9426 /* FirstViewController.swift */; };
-		C02375DD195BEB07000A9426 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02375DC195BEB07000A9426 /* SecondViewController.swift */; };
 		C02375E0195BEB07000A9426 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02375DE195BEB07000A9426 /* Main.storyboard */; };
 		C02375E2195BEB07000A9426 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C02375E1195BEB07000A9426 /* Images.xcassets */; };
 		C02375EE195BEB07000A9426 /* SampleWhiteTileGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02375ED195BEB07000A9426 /* SampleWhiteTileGameTests.swift */; };
+		C02375F8195BEB96000A9426 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02375F7195BEB96000A9426 /* GameViewController.swift */; };
+		C02375FA195BED4D000A9426 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02375F9195BED4D000A9426 /* TileView.swift */; };
+		C02375FC195C1052000A9426 /* TileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02375FB195C1052000A9426 /* TileViewCell.swift */; };
+		C02375FE195C3A04000A9426 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02375FD195C3A04000A9426 /* ScoreViewController.swift */; };
+		C0237600195C4351000A9426 /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02375FF195C4351000A9426 /* GameTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +32,16 @@
 		C02375D3195BEB07000A9426 /* SampleWhiteTileGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleWhiteTileGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02375D7195BEB07000A9426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C02375D8195BEB07000A9426 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C02375DA195BEB07000A9426 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		C02375DC195BEB07000A9426 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		C02375DF195BEB07000A9426 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C02375E1195BEB07000A9426 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C02375E7195BEB07000A9426 /* SampleWhiteTileGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleWhiteTileGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02375EC195BEB07000A9426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C02375ED195BEB07000A9426 /* SampleWhiteTileGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleWhiteTileGameTests.swift; sourceTree = "<group>"; };
+		C02375F7195BEB96000A9426 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		C02375F9195BED4D000A9426 /* TileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		C02375FB195C1052000A9426 /* TileViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileViewCell.swift; sourceTree = "<group>"; };
+		C02375FD195C3A04000A9426 /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		C02375FF195C4351000A9426 /* GameTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				C02375D8195BEB07000A9426 /* AppDelegate.swift */,
-				C02375DA195BEB07000A9426 /* FirstViewController.swift */,
-				C02375DC195BEB07000A9426 /* SecondViewController.swift */,
+				C0237603195C4371000A9426 /* Model */,
+				C0237602195C436A000A9426 /* View */,
+				C0237601195C435C000A9426 /* Controllers */,
 				C02375DE195BEB07000A9426 /* Main.storyboard */,
 				C02375E1195BEB07000A9426 /* Images.xcassets */,
 				C02375D6195BEB07000A9426 /* Supporting Files */,
@@ -110,6 +117,32 @@
 				C02375EC195BEB07000A9426 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C0237601195C435C000A9426 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C02375F7195BEB96000A9426 /* GameViewController.swift */,
+				C02375FD195C3A04000A9426 /* ScoreViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C0237602195C436A000A9426 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C02375F9195BED4D000A9426 /* TileView.swift */,
+				C02375FB195C1052000A9426 /* TileViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C0237603195C4371000A9426 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C02375FF195C4351000A9426 /* GameTimer.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,9 +244,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C02375DD195BEB07000A9426 /* SecondViewController.swift in Sources */,
+				C02375F8195BEB96000A9426 /* GameViewController.swift in Sources */,
+				C02375FA195BED4D000A9426 /* TileView.swift in Sources */,
+				C02375FE195C3A04000A9426 /* ScoreViewController.swift in Sources */,
+				C02375FC195C1052000A9426 /* TileViewCell.swift in Sources */,
 				C02375D9195BEB07000A9426 /* AppDelegate.swift in Sources */,
-				C02375DB195BEB07000A9426 /* FirstViewController.swift in Sources */,
+				C0237600195C4351000A9426 /* GameTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +437,7 @@
 				C02375F3195BEB07000A9426 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C02375F4195BEB07000A9426 /* Build configuration list for PBXNativeTarget "SampleWhiteTileGameTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +446,7 @@
 				C02375F6195BEB07000A9426 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

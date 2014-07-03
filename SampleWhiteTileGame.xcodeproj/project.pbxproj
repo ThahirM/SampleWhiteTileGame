@@ -16,6 +16,7 @@
 		C02375FC195C1052000A9426 /* TileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02375FB195C1052000A9426 /* TileViewCell.swift */; };
 		C02375FE195C3A04000A9426 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02375FD195C3A04000A9426 /* ScoreViewController.swift */; };
 		C0237600195C4351000A9426 /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02375FF195C4351000A9426 /* GameTimer.swift */; };
+		C0266A601965583D0018A714 /* NSObject+PerformSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0266A5F1965583D0018A714 /* NSObject+PerformSelector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		C02375FB195C1052000A9426 /* TileViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileViewCell.swift; sourceTree = "<group>"; };
 		C02375FD195C3A04000A9426 /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		C02375FF195C4351000A9426 /* GameTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
+		C0266A5F1965583D0018A714 /* NSObject+PerformSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+PerformSelector.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				C02375FF195C4351000A9426 /* GameTimer.swift */,
+				C0266A5F1965583D0018A714 /* NSObject+PerformSelector.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			files = (
 				C02375F8195BEB96000A9426 /* GameViewController.swift in Sources */,
 				C02375FA195BED4D000A9426 /* TileView.swift in Sources */,
+				C0266A601965583D0018A714 /* NSObject+PerformSelector.swift in Sources */,
 				C02375FE195C3A04000A9426 /* ScoreViewController.swift in Sources */,
 				C02375FC195C1052000A9426 /* TileViewCell.swift in Sources */,
 				C02375D9195BEB07000A9426 /* AppDelegate.swift in Sources */,

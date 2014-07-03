@@ -92,7 +92,7 @@ class GameTimer: NSObject {
         else {
             
             // we continue observing
-            performClosureAfterDelay(1) {
+            performClosureAfterDelay(0.5) {
                 self.obsererForCompletion()
             }
         }

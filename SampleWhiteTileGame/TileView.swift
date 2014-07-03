@@ -72,7 +72,7 @@ class TileView: UIButton {
         
         // add target to map taps
         addTarget(self, action: Selector("viewTapped:"), forControlEvents: .TouchUpInside)
-
+        
     }
     
     func viewTapped(sender : TileView) {
@@ -86,6 +86,28 @@ class TileView: UIButton {
     
     func wrongTap() {
         tileColor = .RedColor
+        shake()
         tileViewDelegate?.viewTapped(false)
     }
+    
+    var shakeDirection : CGFloat = -1
+    var shakeCount : Int = 0
+    func shake() {
+        
+        self.superview.bringSubviewToFront(self)
+        
+        UIView.animateWithDuration(0.03, delay: 0, options: .CurveEaseInOut, animations: {
+            self.transform = CGAffineTransformMakeTranslation(5 * self.shakeDirection, 0)
+            }, completion: {(finished : Bool) in
+                self.transform = CGAffineTransformIdentity
+                if self.shakeCount > 10 {
+                    self.shakeCount = 0
+                    return
+                }
+                self.shakeCount++
+                self.shakeDirection *= -1
+                self.shake()
+            })
+    }
 }
+

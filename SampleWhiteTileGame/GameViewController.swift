@@ -39,6 +39,7 @@ class GameViewController: UITableViewController, TileViewCellDelegate, GameTimer
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        // prepare tiles to begin playing
         prepareGameView()
         
     }
@@ -46,8 +47,14 @@ class GameViewController: UITableViewController, TileViewCellDelegate, GameTimer
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        // do a single animation to make the tiles in order
         doSingleAnimation()
-        gameTimer = GameTimer(totalTime: 10, timerDelegate: self)
+
+        // setup the game timer
+        setupGameTimer()
+        
+        // start the timer
+        gameTimer!.startTimer()
     }
     
     override func didReceiveMemoryWarning() {
@@ -84,6 +91,19 @@ class GameViewController: UITableViewController, TileViewCellDelegate, GameTimer
         score = 0
     }
     
+    func setupGameTimer() {
+        
+        // get the shared game timer instance
+        gameTimer = GameTimer.sharedInstance
+        
+        // set the delegate to track time changes
+        gameTimer!.gameTimerDelegate = self
+        
+        // set the game time 
+        // XXX we need to add different modes later
+        gameTimer!.time = 10
+    }
+    
     func doSingleAnimation() {
         tableView.scrollToRowAtIndexPath(NSIndexPath(forItem: index--, inSection: 0), atScrollPosition: .Bottom, animated: true)
     }
@@ -94,7 +114,7 @@ class GameViewController: UITableViewController, TileViewCellDelegate, GameTimer
             doSingleAnimation()
         }
         else {
-            performSegueWithIdentifier("kScoreView", sender: self)
+            gameTimer!.stopTimer()
         }
     }
 

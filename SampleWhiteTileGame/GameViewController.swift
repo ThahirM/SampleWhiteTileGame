@@ -136,6 +136,7 @@ class GameViewController: UITableViewController, TileViewCellDelegate, GameTimer
     }
 
     func observeTimerCompletion(timer: GameTimer, elapsedTime: Double, completion: Double) {
+        println("timer running \(elapsedTime)")
         if completion >= 1 { performSegueWithIdentifier("kScoreView", sender: self) }
     }
 }

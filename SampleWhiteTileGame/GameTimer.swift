@@ -48,7 +48,7 @@ class GameTimer: NSObject {
         static var instance : GameTimer?
     }
     
-    class var instance: GameTimer {
+    class var sharedInstance: GameTimer {
     dispatch_once(&Static.token) {  Static.instance = GameTimer() }
         return Static.instance!
     }
@@ -69,15 +69,6 @@ class GameTimer: NSObject {
 
         // set the delegate
         gameTimerDelegate = timerDelegate
-    }
-    
-    func performClosureAfterDelay(delay:Double, closure:()->()) {
-        dispatch_after(
-            dispatch_time(
-                DISPATCH_TIME_NOW,
-                Int64(delay * Double(NSEC_PER_SEC))
-            ),
-            dispatch_get_main_queue(), closure)
     }
     
     func obsererForCompletion() {

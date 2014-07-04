@@ -57,7 +57,7 @@ class TileViewCell: UITableViewCell, TileViewDelegate {
         var cellTiles : NSMutableArray = []
         
         // x offset for arranging tiles
-        var offset = 0.0
+        var offset : CGFloat = 0.0
         
         for _ in 0..4 {
             

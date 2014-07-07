@@ -23,21 +23,21 @@ class GameViewController: UITableViewController, TileViewCellDelegate, GameTimer
         super.init(style: style)
         // Custom initialization
     }
-
+    
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -48,7 +48,7 @@ class GameViewController: UITableViewController, TileViewCellDelegate, GameTimer
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
+
         // do a single animation to make the tiles in order
         doSingleAnimation()
  
@@ -67,20 +67,19 @@ class GameViewController: UITableViewController, TileViewCellDelegate, GameTimer
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // #pragma mark - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
         // Return the number of sections.
         return 1
     }
-
+    
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
         return numberOfRows
     }
-
-  
+    
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
         let cell = tableView!.dequeueReusableCellWithIdentifier(kCellReuseIdentifier, forIndexPath: indexPath) as TileViewCell
         cell.tileViewCellDelegate = self
@@ -151,14 +150,14 @@ class GameViewController: UITableViewController, TileViewCellDelegate, GameTimer
             gameTimer!.stopTimer()
         }
     }
-
+    
     func updateScore() {
         score++
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-
+        
         if segue!.identifier == "kScoreView" {
             
             gameTimer?.stopTimer()
@@ -168,7 +167,7 @@ class GameViewController: UITableViewController, TileViewCellDelegate, GameTimer
         }
         
     }
-
+    
     func observeTimerCompletion(timer: GameTimer, elapsedTime: Double, completion: Double) {
         println("timer running \(elapsedTime)")
         if completion >= 1 { performSegueWithIdentifier("kScoreView", sender: self) }

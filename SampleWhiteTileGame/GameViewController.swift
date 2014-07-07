@@ -128,7 +128,7 @@ class GameViewController: UITableViewController, TileViewCellDelegate, GameTimer
     func setupGameTimer() {
         
         // get the shared game timer instance
-        gameTimer = GameTimer.sharedInstance
+        gameTimer = GameTimer()
         
         // set the delegate to track time changes
         gameTimer!.gameTimerDelegate = self

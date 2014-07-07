@@ -12,7 +12,9 @@ let kCellReuseIdentifier = "kTileViewCell"
 let numberOfRows = 1000000
 
 class GameViewController: UITableViewController, TileViewCellDelegate, GameTimerDelegate {
-
+    
+    var gameMode : NSString?
+    
     var index = numberOfRows - 1
     var score : Int = 0
     var gameTimer : GameTimer?
@@ -49,12 +51,16 @@ class GameViewController: UITableViewController, TileViewCellDelegate, GameTimer
         
         // do a single animation to make the tiles in order
         doSingleAnimation()
-
-        // setup the game timer
-        setupGameTimer()
+ 
+        // prepare game play
+        prepareGamePlay()
+    }
+    
+    override func viewDidDisappear(animated: Bool)  {
+        super.viewDidDisappear(animated)
         
-        // start the timer
-        gameTimer!.startTimer()
+        gameTimer!.stopTimer()
+        gameTimer = nil
     }
     
     override func didReceiveMemoryWarning() {
@@ -80,7 +86,35 @@ class GameViewController: UITableViewController, TileViewCellDelegate, GameTimer
         cell.tileViewCellDelegate = self
         return cell
     }
-  
+    
+    func prepareGamePlay() {
+        
+        // initialize offset and speed
+        initialOffset = 11999432.0
+        initialSpeed = 0.8
+        
+        // setup the game timer
+        setupGameTimer()
+        
+        if gameMode!.isEqualToString("kModeArcade") {
+            autoScroll()
+        }
+        else if gameMode!.isEqualToString("kModeRace") {
+            
+            // set the game time
+            gameTimer!.time = 10
+        }
+        else if gameMode!.isEqualToString("kModeTimeAttack") {
+            
+            // set the game time
+            gameTimer!.time = 30
+        }
+        else { println("XXX unexpected mode") }
+        
+        // start the timer
+        gameTimer!.startTimer()
+    }
+    
     func prepareGameView() {
         
         // reset tiles

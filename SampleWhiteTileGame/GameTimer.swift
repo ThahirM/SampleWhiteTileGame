@@ -43,16 +43,6 @@ class GameTimer: NSObject {
     }
     }
     
-    struct Static {
-        static var token : dispatch_once_t = 0
-        static var instance : GameTimer?
-    }
-    
-    class var sharedInstance: GameTimer {
-    dispatch_once(&Static.token) {  Static.instance = GameTimer() }
-        return Static.instance!
-    }
-    
     init() {
         
         // set the start time

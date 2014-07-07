@@ -132,10 +132,10 @@ class GameViewController: UITableViewController, TileViewCellDelegate, GameTimer
         
         // set the delegate to track time changes
         gameTimer!.gameTimerDelegate = self
-        
-        // set the game time 
-        // XXX we need to add different modes later
-        gameTimer!.time = 10
+    }
+    
+    func shouldDoSingleAnimation() -> Bool {
+        return !gameMode!.isEqualToString("kModeArcade")
     }
     
     func doSingleAnimation() {
@@ -145,7 +145,7 @@ class GameViewController: UITableViewController, TileViewCellDelegate, GameTimer
     func tileTapped(success: Bool) {
         if success {
             updateScore()
-            doSingleAnimation()
+            if shouldDoSingleAnimation() { doSingleAnimation() }
         }
         else {
             gameTimer!.stopTimer()

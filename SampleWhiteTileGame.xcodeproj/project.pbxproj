@@ -17,6 +17,7 @@
 		C02375FE195C3A04000A9426 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02375FD195C3A04000A9426 /* ScoreViewController.swift */; };
 		C0237600195C4351000A9426 /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02375FF195C4351000A9426 /* GameTimer.swift */; };
 		C0266A601965583D0018A714 /* NSObject+PerformSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0266A5F1965583D0018A714 /* NSObject+PerformSelector.swift */; };
+		C0266A621965756B0018A714 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0266A611965756B0018A714 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		C02375FD195C3A04000A9426 /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		C02375FF195C4351000A9426 /* GameTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
 		C0266A5F1965583D0018A714 /* NSObject+PerformSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+PerformSelector.swift"; sourceTree = "<group>"; };
+		C0266A611965756B0018A714 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				C02375D5195BEB07000A9426 /* SampleWhiteTileGame */,
+				C02375D6195BEB07000A9426 /* Supporting Files */,
 				C02375EA195BEB07000A9426 /* SampleWhiteTileGameTests */,
 				C02375D4195BEB07000A9426 /* Products */,
 			);
@@ -86,12 +89,10 @@
 			isa = PBXGroup;
 			children = (
 				C02375D8195BEB07000A9426 /* AppDelegate.swift */,
+				C02375DE195BEB07000A9426 /* Main.storyboard */,
 				C0237603195C4371000A9426 /* Model */,
 				C0237602195C436A000A9426 /* View */,
 				C0237601195C435C000A9426 /* Controllers */,
-				C02375DE195BEB07000A9426 /* Main.storyboard */,
-				C02375E1195BEB07000A9426 /* Images.xcassets */,
-				C02375D6195BEB07000A9426 /* Supporting Files */,
 			);
 			path = SampleWhiteTileGame;
 			sourceTree = "<group>";
@@ -99,9 +100,12 @@
 		C02375D6195BEB07000A9426 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C026281319667BBE00F54FF1 /* Extensions */,
+				C02375E1195BEB07000A9426 /* Images.xcassets */,
 				C02375D7195BEB07000A9426 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			path = SampleWhiteTileGame;
 			sourceTree = "<group>";
 		};
 		C02375EA195BEB07000A9426 /* SampleWhiteTileGameTests */ = {
@@ -124,6 +128,7 @@
 		C0237601195C435C000A9426 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C0266A611965756B0018A714 /* HomeViewController.swift */,
 				C02375F7195BEB96000A9426 /* GameViewController.swift */,
 				C02375FD195C3A04000A9426 /* ScoreViewController.swift */,
 			);
@@ -143,9 +148,16 @@
 			isa = PBXGroup;
 			children = (
 				C02375FF195C4351000A9426 /* GameTimer.swift */,
-				C0266A5F1965583D0018A714 /* NSObject+PerformSelector.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		C026281319667BBE00F54FF1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C0266A5F1965583D0018A714 /* NSObject+PerformSelector.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +262,7 @@
 				C02375F8195BEB96000A9426 /* GameViewController.swift in Sources */,
 				C02375FA195BED4D000A9426 /* TileView.swift in Sources */,
 				C0266A601965583D0018A714 /* NSObject+PerformSelector.swift in Sources */,
+				C0266A621965756B0018A714 /* HomeViewController.swift in Sources */,
 				C02375FE195C3A04000A9426 /* ScoreViewController.swift in Sources */,
 				C02375FC195C1052000A9426 /* TileViewCell.swift in Sources */,
 				C02375D9195BEB07000A9426 /* AppDelegate.swift in Sources */,

@@ -139,4 +139,25 @@ class GameViewController: UITableViewController, TileViewCellDelegate, GameTimer
         println("timer running \(elapsedTime)")
         if completion >= 1 { performSegueWithIdentifier("kScoreView", sender: self) }
     }
+    
+    var initialOffset = 11999432.0
+    var initialSpeed = 0.8
+    var acceleration : CDouble {
+    get {
+        return initialSpeed > 0.2 ? 0.01 : 0
+    }
+    }
+    
+    func autoScroll() {
+        
+        // repeatedly set offset with animation
+        UIView.animateWithDuration(initialSpeed, delay: 0, options: (UIViewAnimationOptions.AllowUserInteraction | UIViewAnimationOptions.CurveLinear), animations: {
+            let scrollView : UIScrollView = self.tableView as UIScrollView
+            self.initialOffset -= 120
+            scrollView.setContentOffset(CGPointMake(0, self.initialOffset), animated: false)
+            }, completion: {finished in
+                self.initialSpeed -= self.initialSpeed * self.acceleration
+                self.autoScroll()
+            })
+    }
 }

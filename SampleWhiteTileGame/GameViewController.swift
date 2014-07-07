@@ -9,7 +9,7 @@
 import UIKit
 
 let kCellReuseIdentifier = "kTileViewCell"
-let numberOfRows = 100000
+let numberOfRows = 1000000
 
 class GameViewController: UITableViewController, TileViewCellDelegate, GameTimerDelegate {
 
